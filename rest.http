@@ -1,0 +1,60 @@
+
+// ACCOUNT
+
+// preleva tutti gli user
+GET http://localhost:3000/user HTTP/1.1
+
+###
+
+
+// preleva tutti
+GET http://localhost:5000/account HTTP/1.1
+
+###
+
+// preleva il record con id specificato
+GET http://localhost:3000/account/33 HTTP/1.1
+
+###
+
+// memorizza il record passato tramite json
+// e lo restituisce
+POST http://localhost:3000/account HTTP/1.1
+content-type: application/json
+
+{
+    "name": "manduria",
+    "surname": "mandurino",
+    "email": "rioner@gmail.com"
+}
+
+###
+
+// memorizza l'account passato tramite json 
+// e cerca/crea l'utente corrispondente a questo account
+// quindi restituisce tutto
+POST http://localhost:5000/account HTTP/1.1
+content-type: application/json
+
+{
+    "providerId": "111",
+    "name": "manduria",
+    "surname": "mandurino",
+    "email": "rioner@gmail.com"
+}
+
+
+###
+
+// memorizza l'user passato tramite json 
+POST http://localhost:3000/user HTTP/1.1
+content-type: application/json
+
+{
+    "accounts":[
+        {"providerId":"117700912937020808745","providerCode":1,"name":"priolo priolus","email":"iorioivano@gmail.com"}
+    ],
+    "devices":[
+        {"deviceId":"0123456789ABCDEF","platform":1,"notifyToken":"f6kIGejpW7s:APA91bHFBrE_DVpIVJQeWld6HMMdZ2ZXKvmIsd0fyDXqXGIIsFU-wQ7lrwgGh1P3KZa8O9y1vI3AoZp_4Y4H7_Cz02eq3xxifujqPvlHON1ExzfAVXs0V_B2EjoWnty4pMM2Az43e0Qm","user":null}
+    ]
+}
