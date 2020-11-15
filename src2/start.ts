@@ -12,7 +12,7 @@ env.dispatch( {
 		children: [
 			{
 				name: "http",
-				port: 80,
+				port: 443,
 				// https: {
 				// 	privkey: path.join(__dirname, "../assets/privkey.pem"),
 				// 	pubcert: path.join(__dirname, "../assets/pubcert.pem"),
