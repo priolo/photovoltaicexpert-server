@@ -4,6 +4,8 @@ import { Root } from "typexpress";
 
 console.log("********3");
 
+const PORT = process.env.PORT || 5000
+
 let env = new Root();
 
 env.dispatch( {
@@ -12,7 +14,7 @@ env.dispatch( {
 		children: [
 			{
 				name: "http",
-				port: 443,
+				port: PORT,
 				// https: {
 				// 	privkey: path.join(__dirname, "../assets/privkey.pem"),
 				// 	pubcert: path.join(__dirname, "../assets/pubcert.pem"),
