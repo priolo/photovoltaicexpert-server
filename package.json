@@ -9,7 +9,7 @@
 	},
 	"scripts": {
 		"build": "tsc",
-		"start": "tsc & node dist/start.js"
+		"start": "node dist/start.js"
 	},
 	"dependencies": {
 		"reflect-metadata": "^0.1.13",

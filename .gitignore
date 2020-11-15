@@ -5,7 +5,7 @@ node_modules/
 .vs/
 .vscode/
 database/
-dist/
+
 
 
 src/tmp/
