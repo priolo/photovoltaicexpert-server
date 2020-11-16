@@ -7,6 +7,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const path_1 = __importDefault(require("path"));
 const typexpress_1 = require("typexpress");
 console.log("********3");
+const PORT = process.env.PORT || 5000;
 let env = new typexpress_1.Root();
 env.dispatch({
     type: "START",
@@ -14,7 +15,7 @@ env.dispatch({
         children: [
             {
                 name: "http",
-                //port: 3000,
+                port: PORT,
                 // https: {
                 // 	privkey: path.join(__dirname, "../assets/privkey.pem"),
                 // 	pubcert: path.join(__dirname, "../assets/pubcert.pem"),
@@ -23,15 +24,12 @@ env.dispatch({
                     {
                         name: "http-static",
                         staticPaths: {
-                            "/app": {
-                                dir: path_1.default.join(__dirname, "../static"),
+                            "/": {
+                                dir: path_1.default.join(__dirname, "../public/build"),
                                 index: true,
                             }
                         },
                     },
-                    // 	// {	
-                    // 	// 	name: "http-body" 
-                    // 	// },
                     // 	// {	
                     // 	// 	name: "http-session" 
                     // 	// },

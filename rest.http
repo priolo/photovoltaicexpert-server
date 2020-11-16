@@ -30,6 +30,22 @@ content-type: application/json
 
 ###
 
+POST https://agile-coast-10001.herokuapp.com/account HTTP/1.1
+content-type: application/json
+
+{
+    "name": "manduria",
+    "surname": "mandurino",
+    "email": "rioner@gmail.com"
+}
+
+###
+
+// preleva tutti
+GET https://agile-coast-10001.herokuapp.com/account HTTP/1.1
+
+###
+
 // memorizza l'account passato tramite json 
 // e cerca/crea l'utente corrispondente a questo account
 // quindi restituisce tutto

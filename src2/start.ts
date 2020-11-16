@@ -23,16 +23,14 @@ env.dispatch( {
 					{
 						name: "http-static",
 						staticPaths: {
-							"/app" : {
-								dir: path.join(__dirname, "../static"),
+							"/" : {
+								dir: path.join(__dirname, "../public/build"),
 								index: true,
 								//options: {  },
 							}
 						},
 					},
-				// 	// {	
-				// 	// 	name: "http-body" 
-				// 	// },
+				
 				// 	// {	
 				// 	// 	name: "http-session" 
 				// 	// },
@@ -40,10 +38,6 @@ env.dispatch( {
 						name: "http-router",
 						dir: `${__dirname}/routers`,
 					},
-					// {
-					// 	name: "http-body-parser",
-					// }
-
 				]
 			},
 			{
